@@ -1,9 +1,11 @@
 # Ignite Lab 01
 
+## Ferramentas
+
 - [NestJS](https://nestjs.com/)
 - GraphQL
 - Apache Kafka
-- Next.js
+- [Next.js](https://nextjs.org/)
 - Apollo Client (GraphQL)
 
 ## Funcionalidades

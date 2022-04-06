@@ -3,6 +3,7 @@
 ## Ferramentas
 
 - [NestJS](https://nestjs.com/)
+- [Prisma](https://prisma.io/)
 - GraphQL
 - Apache Kafka
 - [Next.js](https://nextjs.org/)

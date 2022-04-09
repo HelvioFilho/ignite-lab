@@ -5,6 +5,7 @@ import { DatabaseModule } from '../database/database.module';
 import { ApolloDriver } from '@nestjs/apollo';
 import path from 'node:path';
 import { ProductsResolver } from './graphql/resolvers/products.resolver';
+import { ProductsService } from '../services/products.service';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -14,7 +15,7 @@ import { ProductsResolver } from './graphql/resolvers/products.resolver';
       autoSchemaFile: path.resolve(process.cwd(), 'src/schema.gql'),
     }),
   ],
-  providers: [ProductsResolver],
+  providers: [ProductsResolver, ProductsService],
 })
 // eslint-disable-next-line prettier/prettier
 export class HttpModule { }

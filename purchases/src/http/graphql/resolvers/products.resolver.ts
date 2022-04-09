@@ -1,8 +1,8 @@
 import { UseGuards } from '@nestjs/common';
-import { Query, Resolver } from '@nestjs/graphql';
-import { PrismaService } from '../../../database/prisma/prisma.service';
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { AuthorizationGuard } from '../../../http/auth/authorization.guard';
 import { ProductsService } from '../../../services/products.service';
+import { CreateProductInput } from '../inputs/create-product-input';
 import { Product } from '../models/product';
 
 @Resolver()
@@ -11,8 +11,17 @@ export class ProductsResolver {
   constructor(private productsService: ProductsService) { }
 
   @Query(() => [Product])
-  // @UseGuards(AuthorizationGuard)
+
   products() {
     return this.productsService.listAllProducts();
   }
+
+  // @UseGuards(AuthorizationGuard)
+  @Mutation(() => Product)
+  createProduct(
+    @Args('data') data: CreateProductInput
+  ) {
+    return this.productsService.createProduct(data);
+  }
+
 }

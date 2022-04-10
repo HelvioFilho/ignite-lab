@@ -7,6 +7,9 @@ import path from 'node:path';
 import { CoursesResolver } from './graphql/resolvers/courses.resolver';
 import { EnrollmentsResolver } from './graphql/resolvers/enrollments.resolver';
 import { StudentsResolver } from './graphql/resolvers/students.resolver';
+import { CoursesService } from '../services/courses.service';
+import { EnrollmentsService } from '../services/enrollments.service';
+import { StudentsService } from '../services/students.service';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -21,6 +24,11 @@ import { StudentsResolver } from './graphql/resolvers/students.resolver';
     CoursesResolver,
     EnrollmentsResolver,
     StudentsResolver,
+
+    //Services
+    CoursesService,
+    EnrollmentsService,
+    StudentsService,
   ],
 })
 // eslint-disable-next-line prettier/prettier

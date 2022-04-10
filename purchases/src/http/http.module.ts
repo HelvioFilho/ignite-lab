@@ -1,3 +1,4 @@
+import { CustomersResolver } from './graphql/resolvers/customers.resolver';
 import { PurchasesService } from './../services/purchases.service';
 import { PurchasesResolver } from './graphql/resolvers/purchases.resolver';
 import { Module } from '@nestjs/common';
@@ -22,6 +23,7 @@ import { CustomersService } from '../services/customers.service';
     // Services
     ProductsResolver,
     PurchasesResolver,
+    CustomersResolver,
 
     //Resolvers
     ProductsService,

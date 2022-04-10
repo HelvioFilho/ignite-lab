@@ -1,4 +1,4 @@
-import { PurchasesService } from './../services/purchase.service';
+import { PurchasesService } from './../services/purchases.service';
 import { PurchasesResolver } from './graphql/resolvers/purchases.resolver';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
@@ -8,6 +8,7 @@ import { ApolloDriver } from '@nestjs/apollo';
 import path from 'node:path';
 import { ProductsResolver } from './graphql/resolvers/products.resolver';
 import { ProductsService } from '../services/products.service';
+import { CustomersService } from '../services/customers.service';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -24,7 +25,8 @@ import { ProductsService } from '../services/products.service';
 
     //Resolvers
     ProductsService,
-    PurchasesService
+    PurchasesService,
+    CustomersService
   ],
 })
 // eslint-disable-next-line prettier/prettier

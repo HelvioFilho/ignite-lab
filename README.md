@@ -17,7 +17,7 @@
 
 - [Admin] Listagem de produtos
 
-- [Auth] Listagem de compras
+- [Auth] Listagem de compras ✔
 
 - [Public] Compra de um produto
 

@@ -2,9 +2,11 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { DatabaseModule } from '../database/database.module';
-import { TestResolver } from './test.resolver';
 import { ApolloDriver } from '@nestjs/apollo';
 import path from 'node:path';
+import { CoursesResolver } from './graphql/resolvers/courses.resolver';
+import { EnrollmentsResolver } from './graphql/resolvers/enrollments.resolver';
+import { StudentsResolver } from './graphql/resolvers/students.resolver';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -14,7 +16,12 @@ import path from 'node:path';
       autoSchemaFile: path.resolve(process.cwd(), 'src/schema.gql'),
     }),
   ],
-  providers: [TestResolver],
+  providers: [
+    // Resolvers
+    CoursesResolver,
+    EnrollmentsResolver,
+    StudentsResolver,
+  ],
 })
 // eslint-disable-next-line prettier/prettier
 export class HttpModule { }

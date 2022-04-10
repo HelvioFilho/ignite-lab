@@ -1,3 +1,5 @@
+import { PurchasesService } from './../services/purchase.service';
+import { PurchasesResolver } from './graphql/resolvers/purchases.resolver';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
@@ -15,7 +17,15 @@ import { ProductsService } from '../services/products.service';
       autoSchemaFile: path.resolve(process.cwd(), 'src/schema.gql'),
     }),
   ],
-  providers: [ProductsResolver, ProductsService],
+  providers: [
+    // Services
+    ProductsResolver,
+    PurchasesResolver,
+
+    //Resolvers
+    ProductsService,
+    PurchasesService
+  ],
 })
 // eslint-disable-next-line prettier/prettier
 export class HttpModule { }

@@ -4,7 +4,7 @@
 
 - [NestJS](https://nestjs.com/)
 - [Prisma](https://prisma.io/)
-- GraphQL
+- [GraphQL](https://graphql.org)
 - Apache Kafka
 - [Next.js](https://nextjs.org/)
 - Apollo Client (GraphQL)
@@ -13,7 +13,7 @@
 
 ### Serviço de compras (purchases)
 
-- [Admin] Cadastro de produtos
+- [Admin] Cadastro de produtos ✔
 
 - [Admin] Listagem de produtos
 

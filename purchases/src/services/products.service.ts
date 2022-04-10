@@ -14,7 +14,7 @@ export class ProductsService {
   }
 
   async createProduct({ title }: CreateProductPrams) {
-    const slug = slugify(title);
+    const slug = slugify(title, { lower: true });
 
     const productWithSameSlug = await this.prisma.product.findUnique({
       where: {

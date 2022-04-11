@@ -15,7 +15,7 @@
 
 - [Admin] Cadastro de produtos ✔
 
-- [Admin] Listagem de produtos
+- [Admin] Listagem de produtos ✔
 
 - [Auth] Listagem de compras ✔
 
@@ -27,12 +27,12 @@
 
 - [Admin] Listar matrículas
 
-- [Admin] Listar alunos
+- [Admin] Listar alunos ✔
 
-- [Admin] Listar cursos
+- [Admin] Listar cursos ✔
 
-- [Admin] Cadastrar cursos
+- [Admin] Cadastrar cursos ✔
 
-- [Auth] Listar cursos que tenho acesso
+- [Auth] Listar cursos que tenho acesso ✔
 
 - [Auth] Acessar conteúdo do curso

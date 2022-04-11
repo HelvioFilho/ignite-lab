@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../database/prisma/prisma.service";
+import { KafkaService } from "../messaging/kafka.service";
 
 interface CreatePurchasePrams {
   customerId: string;
@@ -8,7 +9,10 @@ interface CreatePurchasePrams {
 
 @Injectable()
 export class PurchasesService {
-  constructor(private prisma: PrismaService) { }
+  constructor(
+    private prisma: PrismaService,
+    private kafka: KafkaService,
+  ) { }
 
   listAllPurchases() {
     return this.prisma.purchase.findMany({

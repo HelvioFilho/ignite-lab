@@ -5,9 +5,9 @@
 - [NestJS](https://nestjs.com/)
 - [Prisma](https://prisma.io/)
 - [GraphQL](https://graphql.org)
-- Apache Kafka
+- [Apache Kafka](https://kafka.apache.org/)
 - [Next.js](https://nextjs.org/)
-- Apollo Client (GraphQL)
+- [Apollo Client (GraphQL)](https://www.apollographql.com/apollo-federation/)
 
 ## Funcionalidades
 

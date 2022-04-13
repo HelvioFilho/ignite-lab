@@ -1,5 +1,6 @@
 # Ignite Lab 01
 
+  Project completed using the tools mentioned below.
 ## Ferramentas
 
 - [NestJS](https://nestjs.com/)
@@ -19,13 +20,13 @@
 
 - [Auth] Listagem de compras ✔
 
-- [Public] Compra de um produto
+- [Public] Compra de um produto ✔
 
-- [Public] Lista produtos disponíveis p/ compra
+- [Public] Lista produtos disponíveis p/ compra ✔
 
 ### Serviço de sala de aula (classroom)
 
-- [Admin] Listar matrículas
+- [Admin] Listar matrículas ✔
 
 - [Admin] Listar alunos ✔
 
@@ -35,4 +36,4 @@
 
 - [Auth] Listar cursos que tenho acesso ✔
 
-- [Auth] Acessar conteúdo do curso
+- [Auth] Acessar conteúdo do curso ✔

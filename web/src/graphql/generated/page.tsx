@@ -8,7 +8,7 @@ import * as Apollo from '@apollo/client';
 import type React from 'react';
 import { getApolloClient, ApolloClientContext } from '../../lib/withApollo';
 
-export async function getServerPageMe
+export async function getServerPageGetProducts
   (options: Omit<Apollo.QueryOptions<Types.GetProductsQueryVariables>, 'query'>, ctx: ApolloClientContext) {
   const apolloClient = getApolloClient(ctx);
 
@@ -24,22 +24,22 @@ export async function getServerPageMe
     },
   };
 }
-export const useMe = (
+export const useGetProducts = (
   optionsFunc?: (router: NextRouter) => QueryHookOptions<Types.GetProductsQuery, Types.GetProductsQuery>) => {
   const router = useRouter();
   const options = optionsFunc ? optionsFunc(router) : {};
   return useQuery(Operations.GetProductsDocument, options);
 };
 export type PageMeComp = React.FC<{ data?: Types.GetProductsQuery, error?: Apollo.ApolloError }>;
-export const withPageMe = (optionsFunc?: (router: NextRouter) => QueryHookOptions<Types.GetProductsQuery, Types.GetProductsQuery>) => (WrappedComponent: PageMeComp): NextPage => (props) => {
+export const withPageGetProducts = (optionsFunc?: (router: NextRouter) => QueryHookOptions<Types.GetProductsQuery, Types.GetProductsQuery>) => (WrappedComponent: PageMeComp): NextPage => (props) => {
   const router = useRouter()
   const options = optionsFunc ? optionsFunc(router) : {};
   const { data, error } = useQuery(Operations.GetProductsDocument, options)
   return <WrappedComponent {...props} data={data} error={error} />;
 
 };
-export const ssrMe = {
-  getServerPage: getServerPageMe,
-  withPage: withPageMe,
-  usePage: useMe,
+export const ssrGetProducts = {
+  getServerPage: getServerPageGetProducts,
+  withPage: withPageGetProducts,
+  usePage: useGetProducts,
 }
